@@ -1,3 +1,4 @@
+
 # ES6 Arrow Functions
 
 
@@ -37,3 +38,4 @@ Why does this happen? It happens because arrow functions retain the `this` value
     - A question within the context of today's lab assignment
     - An observation about the lab assignment, or related 'Ah-hah!' moment
     - How long you spent working on this assignment
+
