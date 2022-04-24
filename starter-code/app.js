@@ -115,6 +115,8 @@ let sum = function(a, b, c, d) {
 // DONE: Uncomment the following line of code to see the output in the browser console
 console.log(sum(1, 2, 3, 4));
 
+const sumsOne = (a, b, c, d) => a + b + c + d; //worked with Sarah and Natalija to complete Steps 10-11
+console.log(sumsOne(1, 2, 3, 4));
 
 let objectLit = function() {
   return {
@@ -123,9 +125,18 @@ let objectLit = function() {
     key3: 'value3',
   };
 };
+const objectLitty = () => ({
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3',
+});
+
+console.log(objectLitty());
 
 // DONE: Uncomment the following line of code to see the output in the browser console
 console.log(objectLit());
+
+
 
 
 let sumAndProduct = function(a, b) {
@@ -137,6 +148,13 @@ let sumAndProduct = function(a, b) {
 // DONE: Uncomment the following line of code to see the output in the browser console
 console.log(sumAndProduct(3, 9));
 
+const addAndMultiply = (a, b) => {
+  const add = a + b;
+  const multiply = a * b;
+  return [add, multiply];
+}
+
+console.log(addAndMultiply(3, 9));
 
 let message = function(name) {
   return `Hello, ${name}!`;
@@ -145,6 +163,9 @@ let message = function(name) {
 // DONE: Uncomment the following line of code to see the output in the browser console
 console.log(message('Allie'));
 
+const messageRemake = name => `Hello, ${name}!`;
+
+console.log(messageRemake('Allie'));
 
 let Student = function(name, age, hometown) {
   this.name = name;
@@ -154,32 +175,42 @@ let Student = function(name, age, hometown) {
 
 let joe = new Student('Joe', 'Schmoe', 100);
 
+let Student1 = (name, age, hometown) => {
+  this.name = name;
+  this.age = age;
+  this.hometown = hometown;
+};
 // DONE: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
 console.log(joe);
+let anotherStudent = new Student('Joe', 'Schmoe', 100);// worked with Natalija and TA Keian on this code
+console.log(anotherStudent);
 
-// TODO: After viewing the previous console.log(), return the code to a working state.
+// DONE: After viewing the previous console.log(), return the code to a working state.
 
 
 
 Student.prototype.greeting = function() {
   return `Hi, my name is ${this.name}`;
 };
+Student.prototype.greeting1 = () => `Hi, my name is ${this.name}`;
 
 // DONE: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
 console.log(joe.greeting());
+console.log(joe.greeting1());
 
-// TODO: After viewing the previous console.log(), return the code to a working state.
+// DONE: After viewing the previous console.log(), return the code to a working state.
 
 
 
 Student.courseName = function() {
   return 'This student is enrolled in Code 301.';
 };
-// Student.courseName = () => 'This student is enrolled in Code 301.';
-// TODO: Uncomment the following line of code to see the output in the browser console
+Student.courseNames = () => 'This student is enrolled in Code 301.';
+// DONE: Uncomment the following line of code to see the output in the browser console
 console.log(Student.courseName());
+console.log(Student.courseNames());
 
 
 
@@ -189,7 +220,7 @@ Student.prototype.scope = function() {
   console.log(this);
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
+// DONE: Uncomment the following line of code to see the output in the browser console
 joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
@@ -199,8 +230,8 @@ joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// "this" is referring to the object joe, that was called.
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// "this" is referring to the window object on line 226
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// "this" value inside of an arrow function always equals this value from the outer function. "this" is not bound to arrow functions. // looked up some info on google.
