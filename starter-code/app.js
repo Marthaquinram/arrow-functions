@@ -234,4 +234,4 @@ joe.scopeArrow();
 // 2. What is "this" when joe.scopeArrow() is invoked?
 // "this" is referring to the window object on line 226
 // 3. Explain why "this" is different when an arrow function is used.
-// "this" value inside of an arrow function always equals this value from the outer function. "this" is not bound to arrow functions. // looked up some info on google.
+// "this" value inside of an arrow function always equals this value from the outer function. "this" is not bound to arrow functions. // looked up some info on google. https://dmitripavlutin.com 
